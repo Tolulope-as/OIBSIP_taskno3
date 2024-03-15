@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+<body>
+   <div class="container">
+    <h1>Temperature Converter</h1>
+    <div class="converter-container">
+        <div class="temperature1">
+            <p>From Celcius to Fahrenheit:</p>
+            <input type="number" id="temp1">
+            <button class="convert" id="convert-btn1" onclick="ConvertToFahrenheit()">Convert</button>
+        </div>
+        <div class="result-box">
+            <p>Result:</p>
+            <input type="number" id="result1">
+        </div>
+        <div class="temperature2">
+            <p>From Fahrenheit to Celcius:</p>
+            <input type="number" id="temp2">
+            <button class="convert" id="convert-btn2" onclick="ConvertToCelcius()">Convert</button>
+        </div>
+       
+        <div class="result-box">
+            <p>Result</p>
+            <input type="number" id="result2">
+        </div>
+    </div>
+   </div> 
+</body>
+ <script>
+    temp1 = document.getElementById('temp1');
+    temp2 = document.getElementById('temp2');
+    convert1 = document.getElementById('convert-btn1');
+    convert2 = document.getElementById('convert-btn2');
+    result1 = document.getElementById('result1');
+    result2= document.getElementById('result2');
+
+
+    function ConvertToFahrenheit(){
+         result1.value = temp1.value * (9/5) + 32
+    }
+
+    function ConvertToCelcius(){
+         result2.value = (temp2.value-32) * 5/9
+     
+    }
+   
+
+
+
+
+
+
+ </script>
+</html>
